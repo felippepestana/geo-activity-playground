@@ -66,10 +66,15 @@ To add support for a new language (e.g., French):
     uv run pybabel init -i geo_activity_playground/webui/translations/messages.pot -d geo_activity_playground/webui/translations -l fr
     ```
 
-2. Add the language code to the supported locales in `app.py`:
+2. Add the language code to the supported locales in `geo_activity_playground/webui/i18n.py`:
 
     ```python
-    app.config["BABEL_SUPPORTED_LOCALES"] = ["en", "de", "fr"]
+    SUPPORTED_LANGUAGES = [
+        Language(code="en", name="English", native_name="English"),
+        Language(code="de", name="German", native_name="Deutsch"),
+        Language(code="nl", name="Dutch", native_name="Nederlands"),
+        Language(code="fr", name="French", native_name="Français"),
+    ]
     ```
 
 3. Edit the generated `.po` file at `geo_activity_playground/webui/translations/fr/LC_MESSAGES/messages.po` to add translations.
@@ -127,4 +132,3 @@ When working on translations, the typical workflow is:
 4. Edit the `.po` files to add translations
 5. Compile: `pybabel compile ...`
 6. Test in the browser
-

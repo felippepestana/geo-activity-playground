@@ -54,7 +54,7 @@ Please see the [hosted documentation](https://martin-ueding.github.io/geo-activi
 - 🛡️ **Privacy Zones**  
   Blur sensitive areas like your home or workplace on all maps and heatmaps.
 - 🌍 **Internationalization**  
-  Interface available in English, German, and Dutch.
+  Interface available in English, German, Dutch, and Brazilian Portuguese.
 - ⚙️ **Equipment Tracking**  
   Manage your gear, log offset distances (for bikes with prior mileage), and see per-equipment stats.
 
@@ -83,4 +83,3 @@ Here are a few examples of what Geo Activity Playground looks like in action:
 The app runs on **Linux**, **macOS**, and **Windows**. No cloud service required — it's just Python and a browser!
 
 For full setup instructions and OS-specific steps, visit the [documentation](https://martin-ueding.github.io/geo-activity-playground/).
-

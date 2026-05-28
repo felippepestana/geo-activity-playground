@@ -20,6 +20,7 @@ Types of changes
 Added:
 
 - Allow editing the **start time** of an activity from the edit page.
+- Add **Brazilian Portuguese locale option** (`pt_BR`) to the language settings and ship an initial translation catalog for it.
 
 Fixed:
 
