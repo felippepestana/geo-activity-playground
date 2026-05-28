@@ -3,7 +3,6 @@ import datetime
 import enum
 from collections.abc import Iterable
 
-
 MACRO_NAME = "Iniciar Evento"
 
 
@@ -137,9 +136,9 @@ class _EventOrchestrator:
         self._config = config
         self._timeline = sorted(timeline, key=lambda block: block.planned_start_hour)
         self._runtime = runtime
-        self._stage_status = {
-            stage: StageStatus.NAO_INICIADO for stage in self._ordered_stages()
-        }
+        self._stage_status = dict.fromkeys(
+            self._ordered_stages(), StageStatus.NAO_INICIADO
+        )
         self._blocked_stage: EventStage | None = None
         self._incidents: list[str] = []
         self._event_log: list[EventLogEntry] = []
